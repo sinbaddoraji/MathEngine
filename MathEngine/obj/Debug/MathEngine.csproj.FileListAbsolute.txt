@@ -1,0 +1,6 @@
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\bin\Debug\MathEngine.dll
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\bin\Debug\MathEngine.pdb
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\obj\Debug\MathEngine.csprojAssemblyReference.cache
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\obj\Debug\MathEngine.csproj.CoreCompileInputs.cache
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\obj\Debug\MathEngine.dll
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\MathEngine\obj\Debug\MathEngine.pdb

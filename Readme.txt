@@ -1,0 +1,2 @@
+MathEngine is a mathematical expressions evaluator in c#. Math engine can work with custom functions
+ NCalc can parse any expression and evaluate the result, including static or dynamic parameters and custom functions.

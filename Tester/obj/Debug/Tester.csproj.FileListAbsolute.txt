@@ -1,0 +1,10 @@
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\bin\Debug\Tester.exe.config
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\bin\Debug\Tester.exe
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\bin\Debug\Tester.pdb
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\bin\Debug\MathEngine.dll
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\bin\Debug\MathEngine.pdb
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\obj\Debug\Tester.csproj.CopyComplete
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\obj\Debug\Tester.exe
+C:\Users\Sage\Documents\Visual Studio 2017\Projects\MathEngine\Tester\obj\Debug\Tester.pdb
