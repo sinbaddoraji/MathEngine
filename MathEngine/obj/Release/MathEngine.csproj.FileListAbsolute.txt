@@ -1,0 +1,6 @@
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\bin\Release\MathEngine.dll
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\bin\Release\MathEngine.pdb
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\obj\Release\MathEngine.csprojAssemblyReference.cache
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\obj\Release\MathEngine.csproj.CoreCompileInputs.cache
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\obj\Release\MathEngine.dll
+C:\Users\osina\Source\Repos\MathEngine\MathEngine\obj\Release\MathEngine.pdb

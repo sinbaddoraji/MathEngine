@@ -8,12 +8,12 @@ namespace Math
     {
         public readonly Dictionary<string, dynamic> Variables = new Dictionary<string, dynamic>();
 
-        private readonly Regex R = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\/\*\^%\+\-])[\s+]?([-]?\w+(\.\w+)?)");
-        private readonly Regex Pow = new Regex(@"(.*)(([-]?\w+)?(\.)?(\w+))[\s+]?[\^][\s+]?(\w+)");
-        private readonly Regex Mul = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\*])[\s+]?([-]?\w+(\.\w+)?)");
-        private readonly Regex Div = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\/])[\s+]?([-]?\w+(\.\w+)?)");
-        private readonly Regex Brackets = new Regex(@"\((?!\()[^)]+\)");
-        private readonly Regex Mfuc = new Regex(@"(\w+)(\((?!\()[^)]+\))");
+        private readonly Regex R = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\/\*\^%\+\-])[\s+]?([-]?\w+(\.\w+)?)",RegexOptions.Compiled);
+        private readonly Regex Pow = new Regex(@"(.*)(([-]?\w+)?(\.)?(\w+))[\s+]?[\^][\s+]?(\w+)", RegexOptions.Compiled);
+        private readonly Regex Mul = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\*])[\s+]?([-]?\w+(\.\w+)?)", RegexOptions.Compiled);
+        private readonly Regex Div = new Regex(@"([-]?\w+(\.\w+)?)[\s+]?([\/])[\s+]?([-]?\w+(\.\w+)?)", RegexOptions.Compiled);
+        private readonly Regex Brackets = new Regex(@"\((?!\()[^)]+\)", RegexOptions.Compiled);
+        private readonly Regex Mfuc = new Regex(@"(\w+)(\((?!\()[^)]+\))",RegexOptions.Compiled);
 
         public enum ReturnType { Int, Double, Float, Long }
 
@@ -85,16 +85,17 @@ namespace Math
         private void BalanceSigns(ref string expression)
         {
             var c = expression.ToCharArray();
+            var emptyChar = " "[0];
             for (int i = 0; i < c.Length; i++)
             {
                 if ((c[i] == '+' && c[i + 1] == '-') || (c[i] == '-' && c[i + 1] == '+'))
                 {
-                    c[i] = " "[0];
+                    c[i] = emptyChar;
                     c[i + 1] = '-';
                 }
                 else if (c[i] == '-' && c[i + 1] == '-')
                 {
-                    c[i] = " "[0];
+                    c[i] = emptyChar;
                     c[i + 1] = '+';
                 }
             }
@@ -221,6 +222,7 @@ namespace Math
             BalanceSigns(ref expression);
             RemoveFunctions(ref expression, ref returnType);
             AttemptBracketRemoval(ref expression, ref returnType);
+
             try
             {
                 foreach (Match item in new Regex(@"\w+\[\w+\]").Matches(expression))
@@ -234,21 +236,14 @@ namespace Math
                     var index = expression.LastIndexOf(item, StringComparison.Ordinal);
                     expression = expression.Remove(index, item.Length).Insert(index, Convert.ToString(HandleExpression(item, returnType)));
                 }
-                while (Mul.IsMatch(expression))
+                while (Mul.IsMatch(expression) || Div.IsMatch(expression) || R.IsMatch(expression))
                 {
-                    var m = Mul.Matches(expression);
-                    var item = m[0].Value;
-                    expression = expression.Replace(item, Convert.ToString(HandleExpression(item, returnType)));
-                }
-                while (Div.IsMatch(expression))
-                {
-                    var m = Div.Matches(expression);
-                    var item = m[0].Value;
-                    expression = expression.Replace(item, Convert.ToString(HandleExpression(item, returnType)));
-                }
-                while (R.IsMatch(expression))
-                {
-                    var m = R.Matches(expression);
+                    MatchCollection m;
+
+                    if (Mul.IsMatch(expression)) m = Mul.Matches(expression);
+                    else if (Div.IsMatch(expression)) m = Div.Matches(expression);
+                    else m = R.Matches(expression);
+                    
                     var item = m[0].Value;
                     expression = expression.Replace(item, Convert.ToString(HandleExpression(item, returnType)));
                 }

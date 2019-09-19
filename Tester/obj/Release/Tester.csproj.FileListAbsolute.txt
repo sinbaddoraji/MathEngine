@@ -1,0 +1,10 @@
+C:\Users\osina\Source\Repos\MathEngine\Tester\bin\Release\Tester.exe.config
+C:\Users\osina\Source\Repos\MathEngine\Tester\bin\Release\Tester.exe
+C:\Users\osina\Source\Repos\MathEngine\Tester\bin\Release\Tester.pdb
+C:\Users\osina\Source\Repos\MathEngine\Tester\bin\Release\MathEngine.dll
+C:\Users\osina\Source\Repos\MathEngine\Tester\bin\Release\MathEngine.pdb
+C:\Users\osina\Source\Repos\MathEngine\Tester\obj\Release\Tester.csprojAssemblyReference.cache
+C:\Users\osina\Source\Repos\MathEngine\Tester\obj\Release\Tester.csproj.CoreCompileInputs.cache
+C:\Users\osina\Source\Repos\MathEngine\Tester\obj\Release\Tester.csproj.CopyComplete
+C:\Users\osina\Source\Repos\MathEngine\Tester\obj\Release\Tester.exe
+C:\Users\osina\Source\Repos\MathEngine\Tester\obj\Release\Tester.pdb
