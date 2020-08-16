@@ -13,3 +13,4 @@ Abs, Acos, Asin, Atan, Cos, Sin, Tan, Ceiling, Floor, Round, Truncate, Sqrt, Log
 
 Syntax: sqrt(9)
 
+This is an old version of the project. Newer versions can be found under the "Gnosis" repo
